@@ -1,12 +1,21 @@
 package in.sakthi;
 
-public class DisplayMedicine {
-	public static String name(String[] medicineName) {
-		for (String i : medicineName) {
-			System.out.println(i);
-		}
-		return null;
+import java.util.ArrayList;
+import java.util.List;
 
+public class DisplayMedicine {
+
+	private static List<String> medicines = new ArrayList<String>();
+
+	static {
+		medicines.add("Augumentin");
+		medicines.add("Azithromycin");
+		medicines.add("Paracetommol");
+		medicines.add("Piroxicam");
+		medicines.add("Ranitidine");
 	}
 
+	public static List<String> getMedicines() {
+		return medicines;
+	}
 }
