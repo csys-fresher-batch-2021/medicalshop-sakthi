@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DisplayMedicine {
-
-	public static final List<String> medicines = new ArrayList<String>();
+ 
+	
+	private static final List<String> medicines = new ArrayList<String>();
 
 	static {
 		medicines.add("Augumentin");
@@ -14,13 +15,13 @@ public class DisplayMedicine {
 		medicines.add("Piroxicam");
 		medicines.add("Ranitidine");
 	}
-	static void display()
-	{
-		System.out.println("The Medicine is: "+medicines);
+
+	static void display() {
+		System.out.println("The Medicine is: " + medicines);
 	}
 
 	public static List<String> getMedicines() {
 		return medicines;
 	}
-	
+
 }

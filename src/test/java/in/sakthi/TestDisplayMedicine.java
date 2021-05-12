@@ -17,5 +17,4 @@ public class TestDisplayMedicine {
 		assertEquals(5, medicines.size());
 	}
 
-
 }
