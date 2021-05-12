@@ -2,7 +2,7 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList" %>
 <!DOCTYPE html>
-<html>
+<html lang ="en">
 <head>
 <title>Display Medicine</title>
 </head>
@@ -11,6 +11,7 @@
 	<main class="container-fluid">
 	<h1> Display Medicine Name</h1>
 <table class="table table-bordered">
+<caption>Display</caption>
 <thead>
 <tr><th> Sno</th><th>Medicine Name</th></tr>
 </thead>
