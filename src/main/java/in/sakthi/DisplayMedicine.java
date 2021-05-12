@@ -6,7 +6,7 @@ import java.util.List;
 public class DisplayMedicine {
  
 	
-	private static final List<String> medicines = new ArrayList<String>();
+	private static final List<String> medicines = new ArrayList<>();
 
 	static {
 		medicines.add("Augumentin");
