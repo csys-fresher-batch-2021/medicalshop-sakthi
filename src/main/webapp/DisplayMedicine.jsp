@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 <%@page import="in.sakthi.DisplayMedicine"%>
 <%@page import="java.util.List"%>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -10,9 +10,10 @@
 <jsp:include page="header.jsp"></jsp:include>
 	<main class="container-fluid">
 	<h1> Display Medicine Name</h1>
-<table border="1">
+<table class="table table-bordered">
 <thead>
-<tr><th>Sno<th>Medicine Name</th></tr>
+<tr>
+<th> Sno</th><th>Medicine Name</tr>
 </thead>
 <tbody>
     <% 

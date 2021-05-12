@@ -18,4 +18,5 @@ public class DisplayMedicine {
 	public static List<String> getMedicines() {
 		return medicines;
 	}
+	
 }
