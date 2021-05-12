@@ -14,6 +14,10 @@ public class DisplayMedicine {
 		medicines.add("Piroxicam");
 		medicines.add("Ranitidine");
 	}
+	static void display()
+	{
+		System.out.println("The Medicine is: "+medicines);
+	}
 
 	public static List<String> getMedicines() {
 		return medicines;

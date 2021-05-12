@@ -13,7 +13,7 @@ public class TestDisplayMedicine {
 		// DISPLAY THE MEDICINE
 		System.out.println("#####DISPLAY THE MEDICINE NAME#####");
 		List<String> medicines = DisplayMedicine.getMedicines();
-		System.out.println("The Medicine is: "+medicines);
+		DisplayMedicine.display();
 		assertEquals(5, medicines.size());
 	}
 
