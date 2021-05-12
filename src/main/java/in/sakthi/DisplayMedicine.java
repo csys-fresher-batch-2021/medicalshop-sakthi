@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DisplayMedicine {
 
-	private static List<String> medicines = new ArrayList<String>();
+	public static List<String> medicines = new ArrayList<String>();
 
 	static {
 		medicines.add("Augumentin");
