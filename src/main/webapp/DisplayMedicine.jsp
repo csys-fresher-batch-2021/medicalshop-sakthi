@@ -1,4 +1,4 @@
-<%@page import="in.sakthi.DisplayMedicine"%>
+<%@page import="in.sakthi.service.DisplayMedicine"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>

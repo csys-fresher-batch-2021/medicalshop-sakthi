@@ -1,4 +1,4 @@
-package in.sakthi;
+package in.sakthi.service;
 
 import java.util.ArrayList;
 import java.util.List;
