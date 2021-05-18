@@ -7,12 +7,15 @@
 <title>AddMedicine</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+	<main class="container-fluid">
 <h1>Add Medicine</h1>
 <form action= "AddMedicineServlet" method="Get">
 		<label for="medicineName">Medicine Name:</label>
 		<input type="text" name="medicineName" placeholder="Enter Medicine Name" required><br> 
         <button>Submit</button>
-        <a href = "AddMedicineServlet.jsp"></a>
+
 </form>
+</main>
 </body>
 </html>
