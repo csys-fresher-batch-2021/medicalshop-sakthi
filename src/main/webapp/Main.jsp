@@ -7,9 +7,9 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 	<main class="container-fluid">
-	<form>
+	<form action = "AvailableMedicine.jsp">
 		<h1>Features</h1>
-        <a href="Admin.jsp" target="_blank">Admin</a><br>
+        <a href="AvailableMedicine.jsp" target="_blank">Admin</a><br>
         <a href="Customer.jsp" target="_blank">Customer</a>
 </form>
 </main>
