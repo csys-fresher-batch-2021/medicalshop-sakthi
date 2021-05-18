@@ -22,15 +22,13 @@ public class AddMedicineServlet extends HttpServlet {
 	
 		PrintWriter out = response.getWriter();
 		System.out.println("AddMedicineServlet");
-		
-		// Step 1: Get Form Values
+	    /**
+	     * Add a Medicine 
+	     */
 		String medicineName = request.getParameter("medicineName");
 		out.println(medicineName);
 		
-		// Step 2: Call Service => add Product
 		boolean isAdded = MedicineService.addMedicine(medicineName);
-		
-		// Step 3: Decide to which page we should redirect ?
 		if (isAdded) {
 			response.sendRedirect("AvailableMedicine.jsp");
 		} else {
