@@ -28,7 +28,7 @@
 			      <tr>
 			     <td><%=i%></td>
 			     <td><%=Medicine.getName()%></td> 
-			     <td><a href="AddMedicineServlet?medicineName=<%=Medicine.getName()%>" class="btn btn-danger">Add</a>
+			     <td><a href="AddMedicineServlet?medicineName=<%=Medicine.getName()%>"></a>
 			     </tr>
 				 <% } %>
 			</thead>

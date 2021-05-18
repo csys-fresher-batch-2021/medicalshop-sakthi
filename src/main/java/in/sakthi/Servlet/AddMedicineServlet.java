@@ -32,7 +32,7 @@ public class AddMedicineServlet extends HttpServlet {
 		
 		// Step 3: Decide to which page we should redirect ?
 		if (isAdded) {
-			response.sendRedirect("DisplayMedicine.jsp");
+			response.sendRedirect("AvailableMedicine.jsp");
 		} else {
 			String errorMessage = "Unable to add Medicine Name";
 			response.sendRedirect("AddMedicine.jsp?errorMessage=" + errorMessage);
