@@ -7,6 +7,10 @@ import in.sakthi.model.Medicine;
 
 public class MedicineService {
 	
+	 private MedicineService() {
+		    throw new IllegalStateException("Medicine Service");
+		  }
+	
 	private static final List<Medicine> medicines = new ArrayList<>();
     /**
      * List of medicines
@@ -23,8 +27,7 @@ public class MedicineService {
 		isAdded=true;
 		return isAdded;
 	}
-	public static boolean Medicines(String medicineName) {
-		// TODO Auto-generated method stub
+	public static boolean Medicines() {
 		return false;
 	}
 	

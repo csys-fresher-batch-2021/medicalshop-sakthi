@@ -1,4 +1,4 @@
-package in.sakthi.Servlet;
+package in.sakthi.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
