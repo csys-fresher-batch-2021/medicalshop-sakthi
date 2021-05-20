@@ -28,12 +28,17 @@ public class AddMedicineServlet extends HttpServlet {
 		String medicineName = request.getParameter("medicineName");
 		out.println(medicineName);
 		
-		boolean isAdded = MedicineService.addMedicine(medicineName);
-		if (isAdded) {
-			response.sendRedirect("AvailableMedicine.jsp");
-		} else {
-			String errorMessage = "Unable to add Medicine Name";
-			response.sendRedirect("AddMedicine.jsp?errorMessage=" + errorMessage);
+		try {
+			boolean isAdded = MedicineService.addMedicine(medicineName);
+			if (isAdded) {
+				response.sendRedirect("AvailableMedicine.jsp");
+			} else {
+				String errorMessage = "Unable to add Medicine Name";
+				response.sendRedirect("AddMedicine.jsp?errorMessage=" + errorMessage);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	}
