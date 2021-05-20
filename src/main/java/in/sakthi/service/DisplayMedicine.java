@@ -16,7 +16,7 @@ public class DisplayMedicine {
 		medicines.add("Ranitidine");
 	}
 
-	static void display() {
+	public static void display() {
 		System.out.println("The Medicine is: " + medicines);
 	}
 
