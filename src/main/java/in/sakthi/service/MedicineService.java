@@ -7,7 +7,7 @@ import in.sakthi.model.Medicine;
 
 public class MedicineService {
 	
-	 private MedicineService() {
+	 public MedicineService() {
 		    throw new IllegalStateException("Medicine Service");
 		  }
 	
@@ -27,9 +27,11 @@ public class MedicineService {
 		isAdded=true;
 		return isAdded;
 	}
-	public static boolean Medicines() {
-		return false;
-	}
+	
+	  public static boolean Medicines() {
+		  return false; 
+		  }
+	 
 	
 
 }

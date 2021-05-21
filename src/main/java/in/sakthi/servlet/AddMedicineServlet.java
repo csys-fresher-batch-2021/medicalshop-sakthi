@@ -19,15 +19,15 @@ public class AddMedicineServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 		PrintWriter out = response.getWriter();
 		System.out.println("AddMedicineServlet");
 	    /**
 	     * Add a Medicine 
 	     */
+	
 		String medicineName = request.getParameter("medicineName");
 		out.println(medicineName);
-		
+	
 		try {
 			boolean isAdded = MedicineService.addMedicine(medicineName);
 			if (isAdded) {
@@ -37,7 +37,6 @@ public class AddMedicineServlet extends HttpServlet {
 				response.sendRedirect("AddMedicine.jsp?errorMessage=" + errorMessage);
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
