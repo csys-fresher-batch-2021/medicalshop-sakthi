@@ -4,9 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DisplayMedicine {
- 
 	
-	private static final List<String> medicines = new ArrayList<>();
+	private DisplayMedicine()
+	{
+		throw new IllegalStateException("DisplayMedicine");
+	}
+	
+	
+    private static final List<String> medicines = new ArrayList<>();
 
 	static {
 		medicines.add("Augumentin");
@@ -23,5 +28,5 @@ public class DisplayMedicine {
 	public static List<String> getMedicines() {
 		return medicines;
 	}
-
+ 
 }

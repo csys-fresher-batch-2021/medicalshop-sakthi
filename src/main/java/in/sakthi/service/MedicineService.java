@@ -10,7 +10,6 @@ public class MedicineService {
 	 private MedicineService() {
 		    throw new IllegalStateException("Medicine Service");
 		  }
-	
 	private static final List<Medicine> medicines = new ArrayList<>();
     /**
      * List of medicines
@@ -28,7 +27,7 @@ public class MedicineService {
 		return isAdded;
 	}
 	
-	  public static boolean Medicines() {
+	  public static boolean medicines() {
 		  return false; 
 		  }
 	 
