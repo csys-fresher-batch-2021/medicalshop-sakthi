@@ -1,0 +1,37 @@
+<%@page import="in.sakthi.service.MedicineService"%>
+<%@page import="java.util.List"%>
+<%@page import="in.sakthi.model.Medicine"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add a Medicine</title>
+</head>
+<body>
+<jsp:include page="header.jsp"></jsp:include>
+	<main class="container-fluid">
+		<h3>Medicines available in our shops</h3>
+		<table class="table table-bordered">
+		<caption>Medicines name List </caption>
+			<thead>
+				<tr>
+					<th scope="col">S.no</th>
+					<th scope="col">Medicine Name</th>
+					<%
+					List<Medicine> medicines=MedicineService.getMedicines();
+					int i=0;
+					for(Medicine Medicine:medicines){
+						i++;
+						%>
+			      <tr>
+			     <td><%=i%></td>
+			     <td><%=Medicine.getName()%></td> 
+			     <td><a href="AddMedicineServlet?medicineName=<%=Medicine.getName()%>"></a>
+			     </tr>
+				 <% } %>
+			</thead>
+				</table>
+				<a href="AddMedicine.jsp" >Add Medicine</a>
+	</main>
+</body>
+</html>

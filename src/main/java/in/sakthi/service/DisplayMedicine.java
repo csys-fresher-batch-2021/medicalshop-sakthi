@@ -1,13 +1,21 @@
-package in.sakthi;
+package in.sakthi.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DisplayMedicine {
- 
 	
-	private static final List<String> medicines = new ArrayList<>();
-
+	private DisplayMedicine()
+	{
+		throw new IllegalStateException("DisplayMedicine");
+	}
+	
+	
+    private static final List<String> medicines = new ArrayList<>();
+          /**
+           * List of Medicine
+           * Display the Medicine
+           */
 	static {
 		medicines.add("Augumentin");
 		medicines.add("Azithromycin");
@@ -16,12 +24,12 @@ public class DisplayMedicine {
 		medicines.add("Ranitidine");
 	}
 
-	static void display() {
+	public static void display() {
 		System.out.println("The Medicine is: " + medicines);
 	}
 
 	public static List<String> getMedicines() {
 		return medicines;
 	}
-
+ 
 }

@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import in.sakthi.service.DisplayMedicine;
+
 public class TestDisplayMedicine {
 
 	@Test
