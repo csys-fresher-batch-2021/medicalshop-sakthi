@@ -12,7 +12,7 @@
 	<main class="container-fluid">
 		<h3>Medicines available in our shops</h3>
 		<table class="table table-bordered">
-		<caption>Medicines name along with  its serial number </caption>
+		<caption>Medicines name List </caption>
 			<thead>
 				<tr>
 					<th scope="col">S.no</th>

@@ -7,7 +7,7 @@ import in.sakthi.model.Medicine;
 
 public class MedicineService {
 	
-	 public MedicineService() {
+	 private MedicineService() {
 		    throw new IllegalStateException("Medicine Service");
 		  }
 	
