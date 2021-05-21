@@ -12,7 +12,10 @@ public class DisplayMedicine {
 	
 	
     private static final List<String> medicines = new ArrayList<>();
-
+          /**
+           * List of Medicine
+           * Display the Medicine
+           */
 	static {
 		medicines.add("Augumentin");
 		medicines.add("Azithromycin");
