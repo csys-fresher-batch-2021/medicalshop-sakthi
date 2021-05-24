@@ -1,16 +1,16 @@
 package in.sakthi.model;
 
 public class Medicine {
-	private int id;
+	private Integer id;
 	private String name;
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + "]";
 	}
-	public Medicine(int id, String name) {
+	public Medicine(Integer id, String name) {
 		super();
 		this.id = id;
 		this.name = name;

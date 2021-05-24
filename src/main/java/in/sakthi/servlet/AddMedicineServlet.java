@@ -24,7 +24,7 @@ public class AddMedicineServlet extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			System.out.println("AddMedicineServlet");
 			/**
-			 * Add a Medicine 
+			 * Add a Medicine Name
 			 */
 			String medicineName = request.getParameter("medicineName");
 			out.println(medicineName);

@@ -1,3 +1,4 @@
+<%@page import="java.util.Map"%>
 <%@page import="in.sakthi.service.MedicineService"%>
 <%@page import="java.util.List"%>
 <%@page import="in.sakthi.model.Medicine"%>
@@ -18,15 +19,16 @@
 					<th scope="col">S.no</th>
 					<th scope="col">Medicine Name</th>
 					<%
-					List<Medicine> medicines=MedicineService.getMedicines();
+					Map<Integer,String>Medicine=MedicineService.getMedicines();
 					int i=0;
-					for(Medicine Medicine:medicines){
+					for(Integer serialNo:Medicine.keySet()){
+						String medicineName=Medicine.get(serialNo);
 						i++;
 						%>
 			      <tr>
 			     <td><%=i%></td>
-			     <td><%=Medicine.getName()%></td> 
-			     <td><a href="AddMedicineServlet?medicineName=<%=Medicine.getName()%>"></a>
+			     <td><%=medicineName%></td> 
+			     <td><a href="DeleteMedicineServlet?medicineName=<%=medicineName%>"class="btn btn-danger">Delete</a>
 			     </tr>
 				 <% } %>
 			</thead>
