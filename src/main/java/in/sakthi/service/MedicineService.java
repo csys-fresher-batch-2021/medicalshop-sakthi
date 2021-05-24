@@ -38,6 +38,7 @@ public class MedicineService {
 	   */
 		public static boolean deleteMedicine(String medicineName) {
 			boolean isDeleted = false;
+			System.out.println("Succesfully Deleted " +medicineName);
 			Integer id = null;
 			for(Integer key: medicines.keySet()) {
 				String value = medicines.get(key);
