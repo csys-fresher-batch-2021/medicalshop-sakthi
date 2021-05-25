@@ -17,31 +17,31 @@ import in.sakthi.service.MedicineService;
 @WebServlet("/DeleteMedicineServlet")
 public class DeleteMedicineServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-@Override  
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	try {
-		PrintWriter out = response.getWriter();
-		System.out.println("DeleteMedicineServlet");
-		
-		/**
-		 * Delete a Medicine Name
-		 */
-		
-		String medicineName = request.getParameter("medicineName");
-		out.println(medicineName);
-		
-		boolean isDeleted = MedicineService.deleteMedicine(medicineName);
-		if (isDeleted) {
-			response.sendRedirect("AvailableMedicine.jsp");
-		} else {
-			String errorMessage = "Unable to delete Medicine Name";
-			response.sendRedirect("DeleteProduct.jsp?errorMessage=" + errorMessage);
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		try {
+			PrintWriter out = response.getWriter();
+			System.out.println("DeleteMedicineServlet");
+
+			/**
+			 * Delete a Medicine Name
+			 */
+
+			String medicineName = request.getParameter("medicineName");
+			out.println(medicineName);
+
+			boolean isDeleted = MedicineService.deleteMedicine(medicineName);
+			if (isDeleted) {
+				response.sendRedirect("AvailableMedicine.jsp");
+			} else {
+				String errorMessage = "Unable to delete Medicine Name";
+				response.sendRedirect("DeleteProduct.jsp?errorMessage=" + errorMessage);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-	} catch (IOException e) {
-		e.printStackTrace();
 	}
 }
-	}
-
