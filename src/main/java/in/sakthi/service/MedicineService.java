@@ -1,36 +1,66 @@
 package in.sakthi.service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;    
 
-import in.sakthi.model.Medicine;
+import java.util.TreeMap;
+
+import in.sakthi.validation.AddMedicineValidation;
 
 public class MedicineService {
-	
-	 private MedicineService() {
-		    throw new IllegalStateException("Medicine Service");
-		  }
-	private static final List<Medicine> medicines = new ArrayList<>();
-    /**
-     * List of medicines
-     * Added a Medicine
-    */
-    public static  List<Medicine> getMedicines() {
+
+	private MedicineService() {
+	}
+
+	private static final Map<Integer, String> medicines = new TreeMap<>();
+     static {
+    	 medicines.put(1,"Azithromycin");
+    	 medicines.put(2,"Augumentin");
+    	 medicines.put(3, "Piroxicam");
+    	 }
+	/**
+	 * List of medicines Added a Medicine
+	 */
+	public static Map<Integer, String> getMedicines() {
 		return medicines;
 	}
-    public static boolean addMedicine(String medicineName) {
-		boolean isAdded = false;
-		System.out.println("Successfully added " + medicineName);
-		int id = medicines.size() + 1; //11
-		medicines.add(new Medicine(id, medicineName));
-		isAdded=true;
-		return isAdded;
+
+	/**
+	 * Add a medicine and id
+	 * 
+	 * @param medicineName
+	 * @return
+	 */
+	public static boolean addMedicine(String name,String medicineName) {
+
+		Integer id = medicines.size() + 1; // 11
+		medicines.put(id, medicineName);
+		AddMedicineValidation.name(name);
+		return true;
 	}
-	
-	  public static boolean medicines() {
-		  return false; 
-		  }
-	 
-	
+
+
+	/**
+	 * Delete a medicine and id
+	 * 
+	 * @param medicineName
+	 * @return
+	 */
+	public static boolean deleteMedicine(String medicineName) {
+		boolean isDeleted = false;
+		Integer id = null;
+		for(Integer key: medicines.keySet()) {
+			String value = medicines.get(key);
+			if(value.equalsIgnoreCase(medicineName)) {
+				id = key;
+				break;
+			}
+		}
+		if(id != null) {
+			medicines.remove(id);
+			isDeleted = true;
+		}
+		return isDeleted;
+
+	}
 
 }

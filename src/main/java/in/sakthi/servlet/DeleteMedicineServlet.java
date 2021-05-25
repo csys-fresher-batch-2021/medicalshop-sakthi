@@ -12,10 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import in.sakthi.service.MedicineService;
 
 /**
- * Servlet implementation class AddMedicineServlet
+ * Servlet implementation class DeleteMedicineServlet
  */
-@WebServlet("/AddMedicineServlet")
-public class AddMedicineServlet extends HttpServlet {
+@WebServlet("/DeleteMedicineServlet")
+public class DeleteMedicineServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -24,19 +24,21 @@ public class AddMedicineServlet extends HttpServlet {
 
 		try {
 			PrintWriter out = response.getWriter();
-			System.out.println("AddMedicineServlet");
+			System.out.println("DeleteMedicineServlet");
+
 			/**
-			 * Add a Medicine Name
+			 * Delete a Medicine Name
 			 */
+
 			String medicineName = request.getParameter("medicineName");
 			out.println(medicineName);
 
-			boolean isAdded = MedicineService.addMedicine(medicineName, medicineName);
-			if (isAdded) {
+			boolean isDeleted = MedicineService.deleteMedicine(medicineName);
+			if (isDeleted) {
 				response.sendRedirect("AvailableMedicine.jsp");
 			} else {
-				String errorMessage = "Unable to add Medicine Name";
-				response.sendRedirect("AddMedicine.jsp?errorMessage=" + errorMessage);
+				String errorMessage = "Unable to delete Medicine Name";
+				response.sendRedirect("DeleteProduct.jsp?errorMessage=" + errorMessage);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
