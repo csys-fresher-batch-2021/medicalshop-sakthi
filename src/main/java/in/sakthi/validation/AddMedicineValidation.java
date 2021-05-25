@@ -1,6 +1,10 @@
 package in.sakthi.validation;
 
 public class AddMedicineValidation {
+	  private AddMedicineValidation() {
+		    throw new IllegalStateException("AddMedicineValidation");
+		  }
+
 
 	/**
 	 * Validation medicinename
